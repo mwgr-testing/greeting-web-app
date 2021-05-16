@@ -4,21 +4,23 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
-	<!-- <parent>...</parent> -->
+	<parent>
+		<groupId>net.mwgr.testing.github.parent</groupId>
+		<artifactId>spring-boot-parent</artifactId>
+		<version>2.0.0-SNAPSHOT</version>
+	</parent>
 
-	<groupId>%%PROJECT_GROUP_ID%%</groupId>
-	<artifactId>%%PROJECT_ARTIFACT_ID%%</artifactId>
-	<version>%%PROJECT_VERSION%%</version>
-	<!-- <packaging>...</packaging> -->
+	<groupId>net.mwgr.testing.github.greeting</groupId>
+	<artifactId>greeting-web-app</artifactId>
+	<version>1.0-SNAPSHOT</version>
 
-	<name>%%PROJECT_NAME%%</name>
-	<description>%%PROJECT_DESCRIPTION%%</description>
-	<inceptionYear>%%YEAR%%</inceptionYear>
-	<url>https://github.com/%%GITHUB_REPO_OWNER%%/%%GITHUB_REPO_NAME%%</url>
+	<name>MWGR Testing (GitHub) - Greeting Web Application</name>
+	<description>A web application in the testing area that greets the user.</description>
+	<inceptionYear>2021</inceptionYear>
+	<url>https://github.com/mwgr-testing/greeting-web-app</url>
 
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<greeting-lib.version>1.6</greeting-lib.version>
 	</properties>
 
 	<licenses>
@@ -28,52 +30,60 @@
 		</license>
 	</licenses>
 
-	<!-- <organization>...</organization> -->
-	<!-- <developers>...</developers> -->
-	<!-- <contributors>...</contributors> -->
-	<!-- <mailingLists>...</mailingLists> -->
+	<developers>
+		<developer>
+			<id>MWGR</id>
+			<name>Mirko Wagner</name>
+			<email>seelenvirtuose@gmail.com</email>
+		</developer>
+	</developers>
 
 	<scm>
-		<url>https://github.com/%%GITHUB_REPO_OWNER%%/%%GITHUB_REPO_NAME%%</url>
-		<connection>scm:git:https://github.com/%%GITHUB_REPO_OWNER%%/%%GITHUB_REPO_NAME%%.git</connection>
-		<developerConnection>scm:git:https://github.com/%%GITHUB_REPO_OWNER%%/%%GITHUB_REPO_NAME%%.git</developerConnection>
+		<url>https://github.com/mwgr-testing/greeting-web-app</url>
+		<connection>scm:git:https://github.com/mwgr-testing/greeting-web-app.git</connection>
+		<developerConnection>scm:git:https://github.com/mwgr-testing/greeting-web-app.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
 	<issueManagement>
 		<system>GitHub Issues</system>
-		<url>https://github.com/%%GITHUB_REPO_OWNER%%/%%GITHUB_REPO_NAME%%/issues</url>
+		<url>https://github.com/mwgr-testing/greeting-web-app/issues</url>
 	</issueManagement>
 	<ciManagement>
 		<system>GitHub Actions</system>
-		<url>https://github.com/%%GITHUB_REPO_OWNER%%/%%GITHUB_REPO_NAME%%/actions</url>
+		<url>https://github.com/mwgr-testing/greeting-web-app/actions</url>
 	</ciManagement>
-	<distributionManagement>
-		<snapshotRepository>
-			<id>maven-distribution</id>
-			<url>${env.MAVEN_DISTRIBUTION_SNAPSHOTS_URL}</url>
-		</snapshotRepository>
+
+	<repositories>
 		<repository>
-			<id>maven-distribution</id>
-			<url>${env.MAVEN_DISTRIBUTION_RELEASES_URL}</url>
+			<id>mwgr-pkgs</id>
+			<url>https://pkgs.mwgr.net/maven-public</url>
 		</repository>
-		<!-- <site>...</site> -->
-	</distributionManagement>
+	</repositories>
 
-	<!-- <repositories>...</repositories> -->
-	<!-- <pluginRepositories>...</pluginRepositories> -->
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
 
-	<!-- <modules>...</modules> -->
+		<dependency>
+			<groupId>net.mwgr.testing.greeting</groupId>
+			<artifactId>greeting-lib</artifactId>
+			<version>${greeting-lib.version}</version>
+		</dependency>
+	</dependencies>
 
-	<!-- <dependencyManagement>...</dependencyManagement> -->
-	<!-- <dependencies>...</dependencies> -->
-
-	<!-- <build> -->
-	<!-- <pluginManagement>...</pluginManagement> -->
-	<!-- <plugins>...</plugins> -->
-	<!-- </build> -->
-
-	<!-- <reporting>...</reporting> -->
-
-	<!-- <profiles>...</profiles> -->
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>pl.project13.maven</groupId>
+				<artifactId>git-commit-id-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>
