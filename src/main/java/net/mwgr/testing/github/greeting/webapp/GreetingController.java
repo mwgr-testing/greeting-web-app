@@ -1,4 +1,4 @@
-package net.mwgr.testing.greeting.webapp.controller;
+package net.mwgr.testing.github.greeting.webapp;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import net.mwgr.testing.greeting.lib.Greeter;
+import net.mwgr.testing.github.greeting.lib.Greeter;
 
 @RestController
 public class GreetingController {

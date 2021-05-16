@@ -67,7 +67,7 @@
 		</dependency>
 
 		<dependency>
-			<groupId>net.mwgr.testing.greeting</groupId>
+			<groupId>net.mwgr.testing.github.greeting</groupId>
 			<artifactId>greeting-lib</artifactId>
 			<version>${greeting-lib.version}</version>
 		</dependency>

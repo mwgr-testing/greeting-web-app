@@ -1,10 +1,10 @@
-package net.mwgr.testing.greeting.webapp;
+package net.mwgr.testing.github.greeting.webapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import net.mwgr.testing.greeting.lib.Greeter;
+import net.mwgr.testing.github.greeting.lib.Greeter;
 
 @SpringBootApplication
 public class GreetingWebApplication {
