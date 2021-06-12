@@ -17,7 +17,7 @@
 	<name>MWGR Testing (GitHub) - Greeting Web Application</name>
 	<description>A web application in the testing area that greets the user.</description>
 	<inceptionYear>2021</inceptionYear>
-	<url>https://github.com/mwgr-testing/greeting-web-app</url>
+	<url>https://github.com/mwgr-testing/gh-greeting-web-app</url>
 
 	<properties>
 		<greeting-lib.version>1.6</greeting-lib.version>
@@ -41,18 +41,18 @@
 	</developers>
 
 	<scm>
-		<url>https://github.com/mwgr-testing/greeting-web-app</url>
-		<connection>scm:git:https://github.com/mwgr-testing/greeting-web-app.git</connection>
-		<developerConnection>scm:git:https://github.com/mwgr-testing/greeting-web-app.git</developerConnection>
+		<url>https://github.com/mwgr-testing/gh-greeting-web-app</url>
+		<connection>scm:git:https://github.com/mwgr-testing/gh-greeting-web-app.git</connection>
+		<developerConnection>scm:git:https://github.com/mwgr-testing/gh-greeting-web-app.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
 	<issueManagement>
 		<system>GitHub Issues</system>
-		<url>https://github.com/mwgr-testing/greeting-web-app/issues</url>
+		<url>https://github.com/mwgr-testing/gh-greeting-web-app/issues</url>
 	</issueManagement>
 	<ciManagement>
 		<system>GitHub Actions</system>
-		<url>https://github.com/mwgr-testing/greeting-web-app/actions</url>
+		<url>https://github.com/mwgr-testing/gh-greeting-web-app/actions</url>
 	</ciManagement>
 
 	<repositories>
